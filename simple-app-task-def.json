@@ -1,5 +1,5 @@
 {
-    "family": "console-sample-app",
+    "family": "test-cluster",
     "volumes": [
         {
             "name": "my-vol",
@@ -9,14 +9,14 @@
     "containerDefinitions": [
         {
             "environment": [],
-            "name": "simple-app",
-            "image": "amazon/amazon-ecs-sample",
+            "name": "test-cluster",
+            "image": "374387630610.dkr.ecr.us-east-1.amazonaws.com/demo:latest",
             "cpu": 10,
             "memory": 500,
             "portMappings": [
                 {
                     "containerPort": 80,
-                    "hostPort": 80
+                    "protocol": "tcp"
                 }
             ],
             "mountPoints": [
@@ -39,7 +39,7 @@
             "memory": 500,
             "volumesFrom": [
             {
-              "sourceContainer": "simple-app"
+              "sourceContainer": "test-cluster"
             }
             ],
             "entryPoint": [
