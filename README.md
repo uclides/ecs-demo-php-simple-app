@@ -275,3 +275,10 @@ Directions on how to launch this sample app on Amazon ECS can be found in the do
 2. You will notice that after the creation of the pipeline, the first process will begin. This will take a few minutes to complete.
 3. Make changes to the repository, any file, example (index.php). push repository and validate the execution of the pipeline.
    
+### Documentation
+
+[Continuous Deployment with AWS CodePipeline.](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-cd-pipeline.html)
+
+[Create a Pipeline with an Amazon ECR Source and ECS-to-CodeDeploy Deployment.](https://docs.aws.amazon.com/codepipeline/latest/userguide/tutorials-ecs-ecr-codedeploy.html)
+
+[Setting Up for AWS CodeCommit.](https://docs.aws.amazon.com/codecommit/latest/userguide/setting-up.html?icmpid=docs_acc_console_connect_np#setting-up-compat)
