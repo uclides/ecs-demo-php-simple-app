@@ -139,15 +139,17 @@
 3. it is necessary to allow communication between the previously created ELB and the instance created by the ECS service. for this we must modify the associated SG in the instance and allow All access from the SG that is associated with the ALB. For this Example:
 
 ELB (sg-03f791d10a2e4266x)
-|    Type     |      Protocol      | Port Range  |         Source          | Description  |
-| ----------- |:------------------:| :----------:| :---------------------: | :-----------:|
-| HTTP        | TCP                | 80          | 0.0.0.0/0               |              |
+
+| Type | Protocol | Port Range | Source    | Description |
+|------|----------|------------|-----------|-------------|
+| HTTP | TCP      | 80         | 0.0.0.0/0 |             |
 
 
 Instance EC2 (ECS)
-|    Type     |      Protocol      | Port Range  |         Source          | Description  |
-| ----------- |:------------------:| :----------:| :---------------------: | :-----------:|
-| All TCP     | TCP                | 0 - 65535   | sg-03f791d10a2e4266x    | SG from ALB  |
+
+| Type    | Protocol | Port Range | Source               | Description |
+|---------|----------|------------|----------------------|-------------|
+| ALL TCP | TCP      | 0 - 65535  | sg-03f791d10a2e4266x | SG from ALB |
 
 
 **With this configurations only allow access to the ELB.**
